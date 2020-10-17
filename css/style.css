@@ -299,16 +299,6 @@ img {
 }
 
 /* Секция advantages */
-/* стили не нужны, так как заголовок скрыт */
-/* .advantages-section .main-title {
-  color: var(--title-text-color);
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-} */
-
 .advantages-section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -386,6 +376,21 @@ img {
 .work-description-section .item {
   width: 370px;
   height: 294px;
+  position: relative;
+}
+
+.work-description-section .text {
+  padding: 27px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.14;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--secondary-text-color);
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
 }
 
 /* Секция team */
@@ -544,6 +549,7 @@ img {
 .clients-section .company:hover,
 .clients-section .company:focus {
   border-color: var(--accent-color);
+  cursor: pointer;
 }
 
 .clients-section .company:hover svg,
@@ -588,17 +594,8 @@ img {
 .projects-section .button:focus {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
+  cursor: pointer;
 }
-
-/* стили не нужны, так как заголовок скрыт */
-/* .projects-section .main-title {
-  color: var(--title-text-color);
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-} */
 
 .projects-section .cards {
   display: flex;
