@@ -86,8 +86,7 @@ img {
   letter-spacing: 0.02em;
 
   border-bottom: 1px solid var(--secondary-bg-color);
-  padding-top: 24px;
-  padding-bottom: 25px;
+  position: relative;
 }
 
 .header .container {
@@ -103,6 +102,8 @@ img {
 
 .main-nav .logo-link {
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .header .logo-link,
@@ -114,12 +115,30 @@ img {
   display: flex;
 }
 
+.nav-list .item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
 .nav-list .item:not(:last-child) {
   margin-right: 50px;
 }
 
-.nav-list .link.active {
+.nav-list .active {
   color: var(--accent-color);
+}
+
+.nav-list .active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -1px;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  pointer-events: none;
 }
 
 .header-contacts {
@@ -332,7 +351,7 @@ img {
 
 .modal-window .close-button {
   height: 30px;
-  width: 30px;
+  padding: 8.5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-bg-color);
   border-radius: 50%;
@@ -667,7 +686,29 @@ img {
   margin-right: 30px;
 }
 
-.projects-section .sub-container {
+.projects-section .description-sub-container {
+  position: relative;
+}
+
+.description-sub-container p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--secondary-text-color);
+  opacity: 0;
+}
+
+.description-sub-container:hover p {
+  opacity: 1;
+}
+
+.projects-section .label-sub-container {
   border-bottom: 1px solid var(--secondary-bg-color);
   border-left: 1px solid var(--secondary-bg-color);
   border-right: 1px solid var(--secondary-bg-color);
