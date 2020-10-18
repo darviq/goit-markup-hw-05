@@ -283,19 +283,65 @@ img {
   margin-bottom: 30px;
 }
 
-.order-section .link {
+.order-section .button {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  text-align: center;
   letter-spacing: 0.06em;
 
-  display: inline-block;
   padding: 10px 32px;
+  border-style: none;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-window {
+  width: 528px;
+  height: 581px;
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 8px;
+  display: flex;
+  justify-content: flex-end;
+
+  transform: translate(-50%, -50%);
+}
+
+.modal-window .close-button {
+  height: 30px;
+  width: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-bg-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-button svg {
+  width: 11px;
+  height: 11px;
 }
 
 /* Секция advantages */
@@ -510,6 +556,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .company svg {
@@ -549,7 +596,6 @@ img {
 .clients-section .company:hover,
 .clients-section .company:focus {
   border-color: var(--accent-color);
-  cursor: pointer;
 }
 
 .clients-section .company:hover svg,
@@ -579,11 +625,11 @@ img {
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: inherit;
-  text-align: center;
 
   border-style: none;
   border-radius: 4px;
   padding: 6px 22px;
+  cursor: pointer;
 }
 
 .projects-section .item:not(:last-child) {
@@ -594,7 +640,6 @@ img {
 .projects-section .button:focus {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
-  cursor: pointer;
 }
 
 .projects-section .cards {
